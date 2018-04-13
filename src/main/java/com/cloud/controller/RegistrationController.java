@@ -23,6 +23,12 @@ class RegistrationController {
     AttendeeService attendeeService;
 
 
+    @RequestMapping(value = "/landing")
+
+    String getLanding()
+    {
+        return "landing";
+    }
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     String home(Model model) {
         model.addAttribute("attendees", attendeeService.getAttendee());
